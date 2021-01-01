@@ -1,0 +1,2 @@
+Hello World
+This is part of my first GIT project and part of the Odin Project 
