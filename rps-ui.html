@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors Game</title>
-    <link rel="styleshhet" href="rps-ui.css">
+    <link rel="stylesheet" href="rps-ui.css">
     <link rel="stylesheet" href="https://use.typekit.net/dec5rfx.css">
     <link rel="stylesheet" href="https://use.typekit.net/dec5rfx.css">
     <script src="rps-ui.js" defer></script>
@@ -58,56 +58,13 @@
     <footer class="footer">
 
     </footer>
-
+    <div class="modal" id="endGameModal">
+        <p class="modal-title" id="endGameMsg"></p>
+        <button class="btn btn-retart" id="btnRestart">
+            Play Again?
+        </button>
+    </div>
 
 </body>
-<script>
-    // Rock-Paper-Scissors Game (R-P-S)
-
-    let playerSelection;
-    let computerSelection;
-    let playerScore = 0;
-    let computerScore = 0;
-
-    const choiceArray = ["Rock", "Paper", "Scissors"];
-
-    function computerPlay() {
-        // Computer Play function - This will randomly 
-        // select Rock, Paper, or Scissors
-        return choiceArray[~~(Math.random() * choiceArray.length)];
-    }
-
-    function playGame(playerSelection, computerSelection) {
-        // plays a singe game of R-P-S
-        playerSelection = playerSelection.toLowerCase();
-        computerSelection = computerPlay().toLowerCase();
-        if (computerSelection == playerSelection) {
-            //displayResults("Tie Game!");
-            console.log("Tie Game!");
-        } else if (
-            (computerSelection == "rock" && playerSelection == "scissors") ||
-            (computerSelection == "scissors" && playerSelection == "paper") ||
-            (computerSelection == "paper" && playerSelection == "rock")
-        ) {
-            computerScore = ++computerScore;
-            //displayResults(`${computerSelection} beats ${playerSelection}`);
-            console.log(`Computer wins - ${computerSelection} beats ${playerSelection}!`);
-        } else {
-            playerScore = ++playerScore;
-            //displayResults(`${playerSelection} beats ${computerSelection}!`);
-            console.log(`You Win - ${playerSelection} beats ${computerSelection}!`);
-        }
-    }
-
-    playerSelection = window.prompt("What is your Choice?");
-
-    playGame(playerSelection, computerSelection);
-
-    // Helper Functions
-    function capitalize(str) {
-        // Capitalize 1st letter of string
-        return str.charAt(0).toUpperCase() + str.slice(1);
-    }
-</script>
 
 </html>

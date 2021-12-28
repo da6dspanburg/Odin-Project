@@ -1,0 +1,117 @@
+/* rps-ui.css
+  28 dec 2021 */
+
+
+/* COLOR DEFINITIONS */
+
+:root {
+    --primary-light: #dddddd;
+    --primary-dark: #222831;
+    --secondary-dark: #454d5a;
+    --secondary-dark-hover: #757a83;
+    --secondary-dark-active: #3f485e;
+    --header: #182231;
+    --primary-yellow: #f8bf38;
+    --title: #b9da2a;
+}
+
+
+/* HTML - BODY */
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* footer support */
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: "roboto", sans-serif;
+    line-height: 1.75;
+    /* footer support */
+    margin-bottom: 100px;
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+}
+
+button {
+    border: none;
+    color: inherit;
+    /* font-family: inherit; */
+    font-family: "permanent-marker-pro", sans-serif;
+    cursor: pointer;
+    outline: none;
+}
+
+
+/* HEADER AREA */
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+}
+
+.title {
+    font-family: "permanent-marker-pro", sans-serif;
+    font-size: 32px;
+    color: var(--title);
+}
+
+
+/* MAIN */
+
+.main {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.score-info {
+    font-size: 32px;
+}
+
+.scores-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 400px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.btn {
+    border-radius: 10px;
+    background-color: var(--secondary-dark)
+}
+
+.btn-square {
+    width: 150px;
+    height: 150px;
+    color: var(--primary-yellow);
+}
+
+
+/* FOOTER */
+
+
+/* MODALS */
+
+.btn-restart {
+    padding: 10px 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
